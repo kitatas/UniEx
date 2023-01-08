@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using Assert = UnityEngine.Assertions.Assert;
@@ -116,6 +117,26 @@ namespace UniEx.Tests
                 bool result2 = list.TryGetValue(5, out int value2);
                 Assert.IsFalse(result2);
                 Assert.AreEqual(value2, default);
+            }
+        }
+
+        [Test]
+        public void Each()
+        {
+            // Each (array)
+            {
+                int[] array = new int[] { 3, 5, 7, 9 };
+                int sum = 0;
+                array.Each(x => sum += x);
+                Assert.AreEqual(sum, array.ToList().Sum());
+            }
+
+            // Each (list)
+            {
+                List<int> list = new List<int> { 3, 5, 7, 9 };
+                int sum = 0;
+                list.Each(x => sum += x);
+                Assert.AreEqual(sum, list.Sum());
             }
         }
     }

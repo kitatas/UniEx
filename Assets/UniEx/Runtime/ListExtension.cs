@@ -81,5 +81,23 @@ namespace UniEx
             value = self[index];
             return true;
         }
+
+        /// <summary>
+        /// Execute the action on each element of the list.
+        /// </summary>
+        /// <param name="self">Self list.</param>
+        /// <param name="action">The action for element of the list.</param>
+        /// <typeparam name="T">The type of elements in the list.</typeparam>
+        public static void Each<T>(this IList<T> self, System.Action<T> action)
+        {
+            if (self.IsNull()) return;
+
+            foreach (var element in self)
+            {
+                if (element is null) continue;
+
+                action?.Invoke(element);
+            }
+        }
     }
 }
