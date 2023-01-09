@@ -6,6 +6,8 @@ namespace UniEx.Tests
 {
     public sealed class RigidbodyTest
     {
+        #region 3D
+
         [Test]
         public void SetAngularVelocity()
         {
@@ -329,5 +331,127 @@ namespace UniEx.Tests
                 Assert.AreApproximatelyEqual(rigidbody.velocity.z, 0.4f);
             }
         }
+
+        #endregion
+
+        #region 2D
+
+        [Test]
+        public void SetVelocity2D()
+        {
+            // X
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.SetVelocityX(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.5f);
+            }
+
+            // Y
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.SetVelocityY(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.5f);
+            }
+
+            // Reset
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.ResetVelocity();
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.0f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.0f);
+            }
+        }
+
+        [Test]
+        public void AddVelocity2D()
+        {
+            // Add Velocity X
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.AddVelocityX(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.8f);
+            }
+
+            // Add Velocity Y
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.AddVelocityY(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.8f);
+            }
+        }
+
+        [Test]
+        public void MultiplyVelocity2D()
+        {
+            // Multiply Velocity X
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.MultiplyVelocityX(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.15f);
+            }
+
+            // Multiply Velocity Y
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.MultiplyVelocityY(0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.15f);
+            }
+        }
+
+        [Test]
+        public void ClampVelocity2D()
+        {
+            // Clamp Velocity X 1
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.ClampVelocityX(0.1f, 0.2f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.2f);
+            }
+
+            // Clamp Velocity X 2
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.ClampVelocityX(0.4f, 0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.x, 0.4f);
+            }
+
+            // Clamp Velocity Y 1
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.ClampVelocityY(0.1f, 0.2f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.2f);
+            }
+
+            // Clamp Velocity Y 2
+            {
+                var gameObject = new GameObject();
+                var rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.velocity = new Vector2(0.3f, 0.3f);
+                rigidbody.ClampVelocityY(0.4f, 0.5f);
+                Assert.AreApproximatelyEqual(rigidbody.velocity.y, 0.4f);
+            }
+        }
+
+        #endregion
     }
 }

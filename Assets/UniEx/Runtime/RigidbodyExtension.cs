@@ -4,6 +4,8 @@ namespace UniEx
 {
     public static class RigidbodyExtension
     {
+        #region 3D
+
         #region angularVelocity
 
         /// <summary>
@@ -313,6 +315,121 @@ namespace UniEx
         {
             return self.SetVelocityZ(Mathf.Clamp(self.velocity.z, min, max));
         }
+
+        #endregion
+
+        #endregion
+
+        #region 2D
+
+        #region velocity
+
+        /// <summary>
+        /// Set the velocity x of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="x">Set value.</param>
+        /// <returns>Set result.</returns>
+        public static Rigidbody2D SetVelocityX(this Rigidbody2D self, float x)
+        {
+            var velocity = self.velocity;
+            self.velocity = velocity.SetX(x);
+            return self;
+        }
+
+        /// <summary>
+        /// Set the velocity y of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="y">Set value.</param>
+        /// <returns>Set result.</returns>
+        public static Rigidbody2D SetVelocityY(this Rigidbody2D self, float y)
+        {
+            var velocity = self.velocity;
+            self.velocity = velocity.SetY(y);
+            return self;
+        }
+
+        /// <summary>
+        /// Reset the velocity of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <returns>Reset result.</returns>
+        public static Rigidbody2D ResetVelocity(this Rigidbody2D self)
+        {
+            self.velocity = Vector2.zero;
+            return self;
+        }
+
+        /// <summary>
+        /// Add the velocity x of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="x">Add value.</param>
+        /// <returns>Add result.</returns>
+        public static Rigidbody2D AddVelocityX(this Rigidbody2D self, float x)
+        {
+            return self.SetVelocityX(self.velocity.x + x);
+        }
+
+        /// <summary>
+        /// Add the velocity y of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="y">Add value.</param>
+        /// <returns>Add result.</returns>
+        public static Rigidbody2D AddVelocityY(this Rigidbody2D self, float y)
+        {
+            return self.SetVelocityY(self.velocity.y + y);
+        }
+
+        /// <summary>
+        /// Multiply the velocity x of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="x">Multiply value.</param>
+        /// <returns>Multiply result.</returns>
+        public static Rigidbody2D MultiplyVelocityX(this Rigidbody2D self, float x)
+        {
+            return self.SetVelocityX(self.velocity.x * x);
+        }
+
+        /// <summary>
+        /// Multiply the velocity y of the Rigidbody2D.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="y">Multiply value.</param>
+        /// <returns>Multiply result.</returns>
+        public static Rigidbody2D MultiplyVelocityY(this Rigidbody2D self, float y)
+        {
+            return self.SetVelocityY(self.velocity.y * y);
+        }
+
+        /// <summary>
+        /// Clamps the velocity x between the given minimum float and maximum float values. Returns the given value if it is within the minimum and maximum range.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="min">The minimum floating point value to compare against.</param>
+        /// <param name="max">The maximum floating point value to compare against.</param>
+        /// <returns>Clamp result.</returns>
+        public static Rigidbody2D ClampVelocityX(this Rigidbody2D self, float min, float max)
+        {
+            return self.SetVelocityX(Mathf.Clamp(self.velocity.x, min, max));
+        }
+
+        /// <summary>
+        /// Clamps the velocity y between the given minimum float and maximum float values. Returns the given value if it is within the minimum and maximum range.
+        /// </summary>
+        /// <param name="self">Self rigidbody.</param>
+        /// <param name="min">The minimum floating point value to compare against.</param>
+        /// <param name="max">The maximum floating point value to compare against.</param>
+        /// <returns>Clamp result.</returns>
+        public static Rigidbody2D ClampVelocityY(this Rigidbody2D self, float min, float max)
+        {
+            return self.SetVelocityY(Mathf.Clamp(self.velocity.y, min, max));
+        }
+
+        #endregion
 
         #endregion
     }
