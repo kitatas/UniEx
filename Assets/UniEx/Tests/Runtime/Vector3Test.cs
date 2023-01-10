@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using Assert = UnityEngine.Assertions.Assert;
 
 namespace UniEx.Tests
 {
@@ -8,129 +9,255 @@ namespace UniEx.Tests
         [Test]
         public void Property()
         {
-            Assert.AreEqual(Vector3Extension.xy, new Vector3(1.0f, 1.0f, 0.0f));
-            Assert.AreEqual(Vector3Extension.xz, new Vector3(1.0f, 0.0f, 1.0f));
-            Assert.AreEqual(Vector3Extension.yz, new Vector3(0.0f, 1.0f, 1.0f));
+            // xy
+            {
+                var vector = Vector3Extension.xy;
+                Assert.AreApproximatelyEqual(1.0f, vector.x);
+                Assert.AreApproximatelyEqual(1.0f, vector.y);
+                Assert.AreApproximatelyEqual(0.0f, vector.z);
+            }
+
+            // xz
+            {
+                var vector = Vector3Extension.xz;
+                Assert.AreApproximatelyEqual(1.0f, vector.x);
+                Assert.AreApproximatelyEqual(0.0f, vector.y);
+                Assert.AreApproximatelyEqual(1.0f, vector.z);
+            }
+
+            // xz
+            {
+                var vector = Vector3Extension.yz;
+                Assert.AreApproximatelyEqual(0.0f, vector.x);
+                Assert.AreApproximatelyEqual(1.0f, vector.y);
+                Assert.AreApproximatelyEqual(1.0f, vector.z);
+            }
+        }
+
+        [Test]
+        public void To()
+        {
+            // Tuple
+            {
+                var vector = new Vector3(1.0f, 2.0f, 3.0f);
+                var (x, y, z) = vector.ToTuple();
+                Assert.AreApproximatelyEqual(vector.x, x);
+                Assert.AreApproximatelyEqual(vector.y, y);
+                Assert.AreApproximatelyEqual(vector.z, z);
+            }
         }
 
         [Test]
         public void Set()
         {
-            // Set X
+            // X
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.SetX(2.0f);
-                Assert.AreEqual(vector, new Vector3(2.0f, 3.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.SetX(value);
+                Assert.AreApproximatelyEqual(value, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Set Y
+            // Y
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.SetY(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 2.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.SetY(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(value, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Set Z
+            // Z
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.SetZ(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 3.0f, 2.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.SetZ(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(value, vector.z);
             }
         }
 
         [Test]
         public void Add()
         {
-            // Add X
+            // X
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.AddX(2.0f);
-                Assert.AreEqual(vector, new Vector3(5.0f, 3.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.AddX(value);
+                Assert.AreApproximatelyEqual(x + value, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Add Y
+            // Y
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.AddY(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 5.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.AddY(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y + value, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Add Z
+            // Z
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.AddZ(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 3.0f, 5.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.AddZ(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z + value, vector.z);
             }
         }
 
         [Test]
         public void Multiply()
         {
-            // Multiply X
+            // X
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.MultiplyX(2.0f);
-                Assert.AreEqual(vector, new Vector3(6.0f, 3.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.MultiplyX(value);
+                Assert.AreApproximatelyEqual(x * value, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Multiply Y
+            // Y
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.MultiplyY(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 6.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.MultiplyY(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y * value, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Multiply Z
+            // Z
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.MultiplyZ(2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 3.0f, 6.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var value = 2.0f;
+                vector.MultiplyZ(value);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z * value, vector.z);
             }
         }
 
         [Test]
         public void Clamp()
         {
-            // Clamp X 1
+            // X 1
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampX(1.0f, 2.0f);
-                Assert.AreEqual(vector, new Vector3(2.0f, 3.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                vector.ClampX(min, max);
+                Assert.AreApproximatelyEqual(max, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Clamp X 2
+            // X 2
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampX(4.0f, 5.0f);
-                Assert.AreEqual(vector, new Vector3(4.0f, 3.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                vector.ClampX(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Clamp Y 1
+            // X 3
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampY(1.0f, 2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 2.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                vector.ClampX(min, max);
+                Assert.AreApproximatelyEqual(min, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Clamp Y 2
+            // Y 1
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampY(4.0f, 5.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 4.0f, 3.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                vector.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(max, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Clamp Z 1
+            // Y 2
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampZ(1.0f, 2.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 3.0f, 2.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                vector.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
             }
 
-            // Clamp Z 2
+            // Y 3
             {
-                var vector = new Vector3(3.0f, 3.0f, 3.0f);
-                vector.ClampZ(4.0f, 5.0f);
-                Assert.AreEqual(vector, new Vector3(3.0f, 3.0f, 4.0f));
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                vector.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(min, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
+            }
+
+            // Z 1
+            {
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                vector.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(max, vector.z);
+            }
+
+            // Z 2
+            {
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                vector.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(z, vector.z);
+            }
+
+            // Z 3
+            {
+                var vector = new Vector3(2.9f, 3.0f, 3.1f);
+                var (x, y, z) = vector.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                vector.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, vector.x);
+                Assert.AreApproximatelyEqual(y, vector.y);
+                Assert.AreApproximatelyEqual(min, vector.z);
             }
         }
 
@@ -141,26 +268,14 @@ namespace UniEx.Tests
             {
                 var vector = new Vector3(3.0f, 3.0f, 3.0f);
                 var target = new Vector3(3.0f, 4.0f, 5.0f);
-                Assert.AreEqual(vector.GetLength(target), Vector3.Magnitude(vector - target));
+                Assert.AreApproximatelyEqual(Vector3.Magnitude(vector - target), vector.GetLength(target));
             }
 
             // SqrLength
             {
                 var vector = new Vector3(3.0f, 3.0f, 3.0f);
                 var target = new Vector3(3.0f, 4.0f, 5.0f);
-                Assert.AreEqual(vector.GetSqrLength(target), Vector3.SqrMagnitude(vector - target));
-            }
-        }
-
-        [Test]
-        public void To()
-        {
-            // Tuple
-            {
-                var (x, y, z) = new Vector3(1.0f, 2.0f, 3.0f).ToTuple();
-                Assert.AreEqual(x, 1.0f);
-                Assert.AreEqual(y, 2.0f);
-                Assert.AreEqual(z, 3.0f);
+                Assert.AreApproximatelyEqual(Vector3.SqrMagnitude(vector - target), vector.GetSqrLength(target));
             }
         }
     }
