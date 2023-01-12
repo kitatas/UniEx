@@ -7,171 +7,320 @@ namespace UniEx.Tests
     public sealed class QuaternionTest
     {
         [Test]
+        public void To()
+        {
+            // Tuple
+            {
+                var quaternion = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                Assert.AreApproximatelyEqual(quaternion.x, x);
+                Assert.AreApproximatelyEqual(quaternion.y, y);
+                Assert.AreApproximatelyEqual(quaternion.z, z);
+                Assert.AreApproximatelyEqual(quaternion.w, w);
+            }
+        }
+
+        [Test]
         public void Set()
         {
-            // Set X
+            // X
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.SetX(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.x, 0.5f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.SetX(value);
+                Assert.AreApproximatelyEqual(value, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Set Y
+            // Y
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.SetY(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.y, 0.5f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.SetY(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(value, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Set Z
+            // Z
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.SetZ(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.z, 0.5f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.SetZ(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(value, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Set W
+            // W
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.SetW(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.w, 0.5f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.SetW(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(value, quaternion.w);
             }
         }
 
         [Test]
         public void Add()
         {
-            // Add X
+            // X
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.AddX(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.x, 0.8f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.AddX(value);
+                Assert.AreApproximatelyEqual(x + value, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Add Y
+            // Y
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.AddY(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.y, 0.8f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.AddY(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y + value, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Add Z
+            // Z
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.AddZ(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.z, 0.8f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.AddZ(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z + value, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Add W
+            // W
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.AddW(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.w, 0.8f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.AddW(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w + value, quaternion.w);
             }
         }
 
         [Test]
         public void Multiply()
         {
-            // Multiply X
+            // X
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.MultiplyX(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.x, 0.15f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.MultiplyX(value);
+                Assert.AreApproximatelyEqual(x * value, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Multiply Y
+            // Y
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.MultiplyY(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.y, 0.15f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.MultiplyY(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y * value, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Multiply Z
+            // Z
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.MultiplyZ(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.z, 0.15f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.MultiplyZ(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z * value, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Multiply W
+            // W
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.MultiplyW(0.5f);
-                Assert.AreApproximatelyEqual(quaternion.w, 0.15f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var value = 2.0f;
+                quaternion.MultiplyW(value);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w * value, quaternion.w);
             }
         }
 
         [Test]
         public void Clamp()
         {
-            // Clamp X 1
+            // X 1
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampX(0.1f, 0.2f);
-                Assert.AreApproximatelyEqual(quaternion.x, 0.2f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                quaternion.ClampX(min, max);
+                Assert.AreApproximatelyEqual(max, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp X 2
+            // X 2
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampX(0.4f, 0.5f);
-                Assert.AreApproximatelyEqual(quaternion.x, 0.4f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                quaternion.ClampX(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp Y 1
+            // X 3
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampY(0.1f, 0.2f);
-                Assert.AreApproximatelyEqual(quaternion.y, 0.2f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                quaternion.ClampX(min, max);
+                Assert.AreApproximatelyEqual(min, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp Y 2
+            // Y 1
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampY(0.4f, 0.5f);
-                Assert.AreApproximatelyEqual(quaternion.y, 0.4f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                quaternion.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(max, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp Z 1
+            // Y 2
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampZ(0.1f, 0.2f);
-                Assert.AreApproximatelyEqual(quaternion.z, 0.2f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                quaternion.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp Z 2
+            // Y 3
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampZ(0.4f, 0.5f);
-                Assert.AreApproximatelyEqual(quaternion.z, 0.4f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                quaternion.ClampY(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(min, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp W 1
+            // Z 1
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampW(0.1f, 0.2f);
-                Assert.AreApproximatelyEqual(quaternion.w, 0.2f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                quaternion.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(max, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
 
-            // Clamp W 2
+            // Z 2
             {
-                var quaternion = new Quaternion(0.3f, 0.3f, 0.3f, 0.3f);
-                quaternion.ClampW(0.4f, 0.5f);
-                Assert.AreApproximatelyEqual(quaternion.w, 0.4f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                quaternion.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
             }
-        }
 
-        [Test]
-        public void To()
-        {
-            // Tuple
+            // Z 3
             {
-                var (x, y, z, w) = new Quaternion(0.1f, 0.2f, 0.3f, 0.4f).ToTuple();
-                Assert.AreEqual(x, 0.1f);
-                Assert.AreEqual(y, 0.2f);
-                Assert.AreEqual(z, 0.3f);
-                Assert.AreEqual(w, 0.4f);
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                quaternion.ClampZ(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(min, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
+            }
+
+            // W 1
+            {
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (1.0f, 2.0f);
+                quaternion.ClampW(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(max, quaternion.w);
+            }
+
+            // W 2
+            {
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (2.0f, 4.0f);
+                quaternion.ClampW(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(w, quaternion.w);
+            }
+
+            // W 3
+            {
+                var quaternion = new Quaternion(2.8f, 2.9f, 3.1f, 3.2f);
+                var (x, y, z, w) = quaternion.ToTuple();
+                var (min, max) = (4.0f, 5.0f);
+                quaternion.ClampW(min, max);
+                Assert.AreApproximatelyEqual(x, quaternion.x);
+                Assert.AreApproximatelyEqual(y, quaternion.y);
+                Assert.AreApproximatelyEqual(z, quaternion.z);
+                Assert.AreApproximatelyEqual(min, quaternion.w);
             }
         }
     }
