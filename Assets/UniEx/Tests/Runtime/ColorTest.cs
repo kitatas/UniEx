@@ -7,111 +7,172 @@ namespace UniEx.Tests
     public sealed class ColorTest
     {
         [Test]
+        public void To()
+        {
+            // Tuple
+            {
+                var color = new Color(0.1f, 0.2f, 0.3f, 0.4f);
+                var (r, g, b, a) = color.ToTuple();
+                Assert.AreApproximatelyEqual(color.r, r);
+                Assert.AreApproximatelyEqual(color.g, g);
+                Assert.AreApproximatelyEqual(color.b, b);
+                Assert.AreApproximatelyEqual(color.a, a);
+            }
+        }
+
+        [Test]
         public void Set()
         {
-            // Set R
+            // R
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.SetR(0.5f);
-                Assert.AreApproximatelyEqual(color.r, 0.5f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.SetR(value);
+                Assert.AreApproximatelyEqual(value, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Set G
+            // G
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.SetG(0.5f);
-                Assert.AreApproximatelyEqual(color.g, 0.5f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.SetG(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(value, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Set B
+            // B
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.SetB(0.5f);
-                Assert.AreApproximatelyEqual(color.b, 0.5f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.SetB(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(value, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Set A
+            // A
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.SetA(0.5f);
-                Assert.AreApproximatelyEqual(color.a, 0.5f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.SetA(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(value, color.a);
             }
         }
 
         [Test]
         public void Add()
         {
-            // Add R
+            // R
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.AddR(0.5f);
-                Assert.AreApproximatelyEqual(color.r, 0.8f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.AddR(value);
+                Assert.AreApproximatelyEqual(r + value, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Add G
+            // G
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.AddG(0.5f);
-                Assert.AreApproximatelyEqual(color.g, 0.8f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.AddG(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g + value, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Add B
+            // B
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.AddB(0.5f);
-                Assert.AreApproximatelyEqual(color.b, 0.8f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.AddB(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b + value, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Add A
+            // A
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.AddA(0.5f);
-                Assert.AreApproximatelyEqual(color.a, 0.8f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.AddA(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a + value, color.a);
             }
         }
 
         [Test]
         public void Multiply()
         {
-            // Multiply R
+            // R
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.MultiplyR(0.5f);
-                Assert.AreApproximatelyEqual(color.r, 0.15f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.MultiplyR(value);
+                Assert.AreApproximatelyEqual(r * value, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Multiply G
+            // G
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.MultiplyG(0.5f);
-                Assert.AreApproximatelyEqual(color.g, 0.15f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.MultiplyG(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g * value, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Multiply B
+            // B
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.MultiplyB(0.5f);
-                Assert.AreApproximatelyEqual(color.b, 0.15f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.MultiplyB(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b * value, color.b);
+                Assert.AreApproximatelyEqual(a, color.a);
             }
 
-            // Multiply A
+            // A
             {
-                var color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                color.MultiplyA(0.5f);
-                Assert.AreApproximatelyEqual(color.a, 0.15f);
-            }
-        }
-
-        [Test]
-        public void To()
-        {
-            // Tuple
-            {
-                var (r, g, b, a) = new Color(0.1f, 0.2f, 0.3f, 0.4f).ToTuple();
-                Assert.AreApproximatelyEqual(r, 0.1f);
-                Assert.AreApproximatelyEqual(g, 0.2f);
-                Assert.AreApproximatelyEqual(b, 0.3f);
-                Assert.AreApproximatelyEqual(a, 0.4f);
+                var color = new Color(0.28f, 0.29f, 0.31f, 0.32f);
+                var (r, g, b, a) = color.ToTuple();
+                var value = 0.5f;
+                color.MultiplyA(value);
+                Assert.AreApproximatelyEqual(r, color.r);
+                Assert.AreApproximatelyEqual(g, color.g);
+                Assert.AreApproximatelyEqual(b, color.b);
+                Assert.AreApproximatelyEqual(a * value, color.a);
             }
         }
     }
