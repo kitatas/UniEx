@@ -14,27 +14,31 @@ namespace UniEx.Tests
             // Get Last Index (array)
             {
                 int[] array = new int[] { 3, 5, 7, 9 };
-                Assert.AreEqual(array.GetLastIndex(), 3);
+                var lastIndex = array.ToList().IndexOf(array.Last());
+                Assert.AreEqual(array.GetLastIndex(), lastIndex);
             }
 
             // Get Last Index (list)
             {
                 List<int> list = new List<int> { 3, 5, 7, 9 };
-                Assert.AreEqual(list.GetLastIndex(), 3);
+                var lastIndex = list.IndexOf(list.Last());
+                Assert.AreEqual(list.GetLastIndex(), lastIndex);
             }
 
             // Get Random Index (array)
             {
                 int[] array = new int[] { 3, 5, 7, 9 };
                 var index = array.GetRandomIndex();
-                Assert.IsTrue(index.IsBetween(0, 3));
+                var lastIndex = array.ToList().IndexOf(array.Last());
+                Assert.IsTrue(index.IsBetween(0, lastIndex));
             }
 
             // Get Random Index (list)
             {
                 List<int> list = new List<int> { 3, 5, 7, 9 };
                 var index = list.GetRandomIndex();
-                Assert.IsTrue(index.IsBetween(0, 3));
+                var lastIndex = list.IndexOf(list.Last());
+                Assert.IsTrue(index.IsBetween(0, lastIndex));
             }
         }
 
@@ -98,9 +102,10 @@ namespace UniEx.Tests
             // Try Get Value (array)
             {
                 int[] array = new int[] { 3, 5, 7, 9 };
-                bool result1 = array.TryGetValue(0, out int value1);
+                int targetIndex = 0;
+                bool result1 = array.TryGetValue(targetIndex, out int value1);
                 Assert.IsTrue(result1);
-                Assert.AreEqual(value1, 3);
+                Assert.AreEqual(value1, array[targetIndex]);
 
                 bool result2 = array.TryGetValue(5, out int value2);
                 Assert.IsFalse(result2);
@@ -110,9 +115,10 @@ namespace UniEx.Tests
             // Try Get Value (list)
             {
                 List<int> list = new List<int> { 3, 5, 7, 9 };
-                bool result1 = list.TryGetValue(0, out int value1);
+                int targetIndex = 0;
+                bool result1 = list.TryGetValue(targetIndex, out int value1);
                 Assert.IsTrue(result1);
-                Assert.AreEqual(value1, 3);
+                Assert.AreEqual(value1, list[targetIndex]);
 
                 bool result2 = list.TryGetValue(5, out int value2);
                 Assert.IsFalse(result2);
