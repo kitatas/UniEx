@@ -1,0 +1,708 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GameObjectExtension
+   | UniEx </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GameObjectExtension
+   | UniEx ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UniEx.GameObjectExtension">
+  
+  
+  <h1 id="UniEx_GameObjectExtension" data-uid="UniEx.GameObjectExtension" class="text-break">Class GameObjectExtension
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GameObjectExtension</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UniEx.html">UniEx</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="UniEx_GameObjectExtension_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class GameObjectExtension</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="UniEx_GameObjectExtension_DestroyAll_" data-uid="UniEx.GameObjectExtension.DestroyAll*"></a>
+  <h4 id="UniEx_GameObjectExtension_DestroyAll_IList_GameObject__System_Single_" data-uid="UniEx.GameObjectExtension.DestroyAll(IList{GameObject},System.Single)">DestroyAll(IList&lt;GameObject&gt;, Single)</h4>
+  <div class="markdown level1 summary"><p>Destroy all game objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyAll(this IList&lt;GameObject&gt; self, float duration = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self list of the game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The optional amount of time to delay before destroying the game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_DestroyChildren_" data-uid="UniEx.GameObjectExtension.DestroyChildren*"></a>
+  <h4 id="UniEx_GameObjectExtension_DestroyChildren_GameObject_System_Single_" data-uid="UniEx.GameObjectExtension.DestroyChildren(GameObject,System.Single)">DestroyChildren(GameObject, Single)</h4>
+  <div class="markdown level1 summary"><p>Destroy children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyChildren(this GameObject self, float duration = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The optional amount of time to delay before destroying the game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_EachChildren_" data-uid="UniEx.GameObjectExtension.EachChildren*"></a>
+  <h4 id="UniEx_GameObjectExtension_EachChildren_GameObject_Action_GameObject__" data-uid="UniEx.GameObjectExtension.EachChildren(GameObject,Action{GameObject})">EachChildren(GameObject, Action&lt;GameObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Execute the action on each children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EachChildren(this GameObject self, Action&lt;GameObject&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action for children of the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_GetOrAddComponent_" data-uid="UniEx.GameObjectExtension.GetOrAddComponent*"></a>
+  <h4 id="UniEx_GameObjectExtension_GetOrAddComponent__1_GameObject_" data-uid="UniEx.GameObjectExtension.GetOrAddComponent``1(GameObject)">GetOrAddComponent&lt;T&gt;(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Returns the component of Type type if the game object has one attached, adds a component if it doesn&apos;t.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetOrAddComponent&lt;T&gt;(this GameObject self)
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Get or add result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of component to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_HasComponent_" data-uid="UniEx.GameObjectExtension.HasComponent*"></a>
+  <h4 id="UniEx_GameObjectExtension_HasComponent__1_GameObject_" data-uid="UniEx.GameObjectExtension.HasComponent``1(GameObject)">HasComponent&lt;T&gt;(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the game object has component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasComponent&lt;T&gt;(this GameObject self)
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Check result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of component to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_RemoveComponent_" data-uid="UniEx.GameObjectExtension.RemoveComponent*"></a>
+  <h4 id="UniEx_GameObjectExtension_RemoveComponent__1_GameObject_System_Single_" data-uid="UniEx.GameObjectExtension.RemoveComponent``1(GameObject,System.Single)">RemoveComponent&lt;T&gt;(GameObject, Single)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the game object remove component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveComponent&lt;T&gt;(this GameObject self, float duration = 0F)
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The optional amount of time to delay before destroying the component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Remove result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of component to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetActiveAll_" data-uid="UniEx.GameObjectExtension.SetActiveAll*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetActiveAll_IList_GameObject__System_Boolean_" data-uid="UniEx.GameObjectExtension.SetActiveAll(IList{GameObject},System.Boolean)">SetActiveAll(IList&lt;GameObject&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Activates / Deactivates all game objects, depending on the given true or false value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetActiveAll(this IList&lt;GameObject&gt; self, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self list of the game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Activate or deactivate the all game objects, where true activates the GameObject and false deactivates the GameObject.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetActiveChildren_" data-uid="UniEx.GameObjectExtension.SetActiveChildren*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetActiveChildren_GameObject_System_Boolean_" data-uid="UniEx.GameObjectExtension.SetActiveChildren(GameObject,System.Boolean)">SetActiveChildren(GameObject, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Activates / Deactivates children, depending on the given true or false value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetActiveChildren(this GameObject self, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Activate or deactivate the children, where true activates the GameObject and false deactivates the GameObject.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetChild_" data-uid="UniEx.GameObjectExtension.SetChild*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetChild_GameObject_GameObject_" data-uid="UniEx.GameObjectExtension.SetChild(GameObject,GameObject)">SetChild(GameObject, GameObject)</h4>
+  <div class="markdown level1 summary"><p>Set the child of this game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObject SetChild(this GameObject self, GameObject child)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">child</span></td>
+        <td><p>The child to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetChildren_" data-uid="UniEx.GameObjectExtension.SetChildren*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetChildren_GameObject_IList_GameObject__" data-uid="UniEx.GameObjectExtension.SetChildren(GameObject,IList{GameObject})">SetChildren(GameObject, IList&lt;GameObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the children of this game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObject SetChildren(this GameObject self, IList&lt;GameObject&gt; children)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">children</span></td>
+        <td><p>The children to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetLayer_" data-uid="UniEx.GameObjectExtension.SetLayer*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetLayer_GameObject_System_String_" data-uid="UniEx.GameObjectExtension.SetLayer(GameObject,System.String)">SetLayer(GameObject, String)</h4>
+  <div class="markdown level1 summary"><p>Set the layer of this game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObject SetLayer(this GameObject self, string layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td><p>The layer to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UniEx_GameObjectExtension_SetTag_" data-uid="UniEx.GameObjectExtension.SetTag*"></a>
+  <h4 id="UniEx_GameObjectExtension_SetTag_GameObject_System_String_" data-uid="UniEx.GameObjectExtension.SetTag(GameObject,System.String)">SetTag(GameObject, String)</h4>
+  <div class="markdown level1 summary"><p>Set the tag of this game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObject SetTag(this GameObject self, string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Self game object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            UniEx
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

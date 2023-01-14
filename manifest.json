@@ -1,0 +1,296 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://kitatas.github.io/UniEx/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://kitatas.github.io/UniEx/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/UniEx/UniEx/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.ColorExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.ColorExtension.html",
+          "hash": "bCG6XpEgEwGmD6jruu61EgEJaBem7q3rPSzyEwG7j8s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.GameObjectExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.GameObjectExtension.html",
+          "hash": "5xJOUblZChKI/kW6/0O4Z8kDJu7T6LjvVhVo3sgMbZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.ListExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.ListExtension.html",
+          "hash": "tK5nbDnduFODxjUnudUXNDoAAxfIo27jWskqMmuhZRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.MathfExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.MathfExtension.html",
+          "hash": "6MWj5k11oCNnLRGhwF5xj9jIJNRPy6YrabWyY3PMvl8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.MonoBehaviourExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.MonoBehaviourExtension.html",
+          "hash": "B4jyNdefNWlJ+rieR7o+xumaVsu8VBBXsUorAprXGRY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.QuaternionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.QuaternionExtension.html",
+          "hash": "vQTBMfwOufsHXdj2X/Rs8/HSA7Ms5Re/icaI9Re+khw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.RendererExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.RendererExtension.html",
+          "hash": "+23e3sOCZ7AHqGkdfvIjCLdo2+7ReAcPjnv/eu71CTI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.RigidbodyExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.RigidbodyExtension.html",
+          "hash": "shdzftuYhCA9Ptb4WfjrKOeyWa8mUDYhKAuuq2V32/U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.TransformExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.TransformExtension.html",
+          "hash": "ipE2OMRhzMPEKgrwxbZ0GbgEa8NiuLOka4dv3JMVkK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.UiExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.UiExtension.html",
+          "hash": "FrrwzBCLWXPHwLcphMhfv9JH4EGIITsq9ZsangtwqO8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.Vector2Extension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.Vector2Extension.html",
+          "hash": "ufPJpKb07/vrcP2c3UcQxoCzNRfTp/pN1FfcFQFEZJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.Vector3Extension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.Vector3Extension.html",
+          "hash": "ShUOIe18dftJ3I7l3aZeBAgGXKviojvY9FpA4L3UzbI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniEx.html",
+          "hash": "9YqrEjUoZi1ZIinqw5Jez4omvaGKX41B/pdBi99gdKE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "IYgikhjpBS5s6SxU24a1yAQGn3/dr0sj4vV4RWXhotk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "5xj5ts7E3svt0kCZEMhj1L8LqcZcbL8unXu6EHmF0eE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "4LbCQEzZJsYJDQh0TqXQjcXWmSxbkUW6wYGU6J0KnCM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 13,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
