@@ -151,7 +151,7 @@ namespace UniEx.Tests
         {
             // Remove Component
             {
-                GameObject self = new GameObject { name = "obj" };
+                GameObject self = new GameObject();
                 self.AddComponent<Rigidbody>();
                 Assert.IsTrue(self.TryGetComponent<Rigidbody>(out var rigidbody));
 
