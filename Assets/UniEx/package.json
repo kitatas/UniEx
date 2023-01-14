@@ -1,7 +1,11 @@
 {
   "name": "com.kitatas.uniex",
-  "version": "0.0.1",
-  "displayName": "UniEx",
+  "version": "1.0.0",
   "description": "Extensions for Unity",
-  "unity": "2021.3"
+  "displayName": "UniEx",
+  "unity": "2021.3",
+  "author": {
+    "name": "kitatas"
+  },
+  "license": "MIT"
 }
