@@ -1,12 +1,12 @@
-# UniEx
+# **UniEx**
 
 UniEx is extension methods for Unity.
 
-## Documentation
+### Documentation
 
- now loading...
+[Here](https://kitatas.github.io/UniEx).
 
-## Installation
+### Installation
 
 Please choose `Unity Package Manager` to `Add package from git URL...` and enter this URL.
 
@@ -14,10 +14,10 @@ Please choose `Unity Package Manager` to `Add package from git URL...` and enter
 https://github.com/kitatas/UniEx.git?path=/Assets/UniEx
 ```
 
-## Target Environment
+### Target Environment
 
 Unity2021.3 or later
 
-## LICENSE
+### LICENSE
 
 MIT License.
