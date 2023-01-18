@@ -439,6 +439,22 @@ references:
   fullName.vb: UniEx.ListExtension.GetLastIndex(Of T)(IList(Of T))
   nameWithType: ListExtension.GetLastIndex<T>(IList<T>)
   nameWithType.vb: ListExtension.GetLastIndex(Of T)(IList(Of T))
+- uid: UniEx.ListExtension.GetRandom*
+  name: GetRandom
+  href: api/UniEx.ListExtension.html#UniEx_ListExtension_GetRandom_
+  commentId: Overload:UniEx.ListExtension.GetRandom
+  isSpec: "True"
+  fullName: UniEx.ListExtension.GetRandom
+  nameWithType: ListExtension.GetRandom
+- uid: UniEx.ListExtension.GetRandom``1(IList{``0})
+  name: GetRandom<T>(IList<T>)
+  href: api/UniEx.ListExtension.html#UniEx_ListExtension_GetRandom__1_IList___0__
+  commentId: M:UniEx.ListExtension.GetRandom``1(IList{``0})
+  name.vb: GetRandom(Of T)(IList(Of T))
+  fullName: UniEx.ListExtension.GetRandom<T>(IList<T>)
+  fullName.vb: UniEx.ListExtension.GetRandom(Of T)(IList(Of T))
+  nameWithType: ListExtension.GetRandom<T>(IList<T>)
+  nameWithType.vb: ListExtension.GetRandom(Of T)(IList(Of T))
 - uid: UniEx.ListExtension.GetRandomIndex*
   name: GetRandomIndex
   href: api/UniEx.ListExtension.html#UniEx_ListExtension_GetRandomIndex_
