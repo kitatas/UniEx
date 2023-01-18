@@ -28,6 +28,17 @@ namespace UniEx
         }
 
         /// <summary>
+        /// Get the random element of list.
+        /// </summary>
+        /// <param name="self">Self list.</param>
+        /// <typeparam name="T">The type of elements in the list.</typeparam>
+        /// <returns>Random element of list.</returns>
+        public static T GetRandom<T>(this IList<T> self)
+        {
+            return self[self.GetRandomIndex()];
+        }
+
+        /// <summary>
         /// Returns true if list is null.
         /// </summary>
         /// <param name="self">Self list.</param>

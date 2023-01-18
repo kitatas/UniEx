@@ -9,36 +9,50 @@ namespace UniEx.Tests
     public sealed class ListTest
     {
         [Test]
-        public void GetIndex()
+        public void Get()
         {
-            // Get Last Index (array)
+            // Last Index (array)
             {
                 int[] array = new int[] { 3, 5, 7, 9 };
-                var lastIndex = array.ToList().IndexOf(array.Last());
+                var lastIndex = array.Length - 1;
                 Assert.AreEqual(array.GetLastIndex(), lastIndex);
             }
 
-            // Get Last Index (list)
+            // Last Index (list)
             {
                 List<int> list = new List<int> { 3, 5, 7, 9 };
-                var lastIndex = list.IndexOf(list.Last());
+                var lastIndex = list.Count - 1;
                 Assert.AreEqual(list.GetLastIndex(), lastIndex);
             }
 
-            // Get Random Index (array)
+            // Random Index (array)
             {
                 int[] array = new int[] { 3, 5, 7, 9 };
                 var index = array.GetRandomIndex();
-                var lastIndex = array.ToList().IndexOf(array.Last());
+                var lastIndex = array.Length - 1;
                 Assert.IsTrue(index.IsBetween(0, lastIndex));
             }
 
-            // Get Random Index (list)
+            // Random Index (list)
             {
                 List<int> list = new List<int> { 3, 5, 7, 9 };
                 var index = list.GetRandomIndex();
-                var lastIndex = list.IndexOf(list.Last());
+                var lastIndex = list.Count - 1;
                 Assert.IsTrue(index.IsBetween(0, lastIndex));
+            }
+
+            // Random (array)
+            {
+                int[] array = new int[] { 3, 5, 7, 9 };
+                var element = array.GetRandom();
+                Assert.IsTrue(array.ToList().Any(x => x == element));
+            }
+
+            // Random (array)
+            {
+                List<int> list = new List<int> { 3, 5, 7, 9 };
+                var element = list.GetRandom();
+                Assert.IsTrue(list.Any(x => x == element));
             }
         }
 
