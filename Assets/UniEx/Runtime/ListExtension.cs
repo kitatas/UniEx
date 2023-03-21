@@ -24,7 +24,7 @@ namespace UniEx
         /// <returns>Random index of list.</returns>
         public static int GetRandomIndex<T>(this IList<T> self)
         {
-            return Random.Range(0, self.GetLastIndex());
+            return Random.Range(0, self.Count);
         }
 
         /// <summary>
